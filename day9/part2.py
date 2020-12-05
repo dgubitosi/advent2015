@@ -22,13 +22,13 @@ perms = list(itertools.permutations(edges))
 for p in perms:
     distance = 0 
     for i in range(1, len(p)):
-       distance += edges[p[i-1]][p[i]]
+        distance += edges[p[i-1]][p[i]]
     if distance < min:
-       min = distance
-       minpath = p
+        min = distance
+        minpath = p
     if distance > max:
-       max = distance
-       maxpath = p
+        max = distance
+        maxpath = p
     print(p, distance)
 print(minpath, min)
 print(maxpath, max)
