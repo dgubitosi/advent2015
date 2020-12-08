@@ -15,11 +15,7 @@ containers = list()
 with open("input.txt") as f:
     containers = [ int(x.strip()) for x in f.readlines() ]
 
-d = dict()
-for s in subset_sum(containers, 150):
-    d.setdefault(s, 0)
-    d[s]+=1
-for x in sorted(d):
-    print(x, d[x])
-
+s = subset_sum(containers, 150)
+d = dict((i, s.count(i)) for i in s)
+print(list(sorted(d.items()))[0])
 
