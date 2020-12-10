@@ -12,12 +12,6 @@ with open("input.txt") as f:
             replacements.setdefault(src, [])
             replacements[src].append(dst)
 
-'''
-print(target)
-for r in replacements:
-    print(r, replacements[r])
-'''
-
 targets = set()
 for i in range(len(target)):
     check = [ target[i] ]
